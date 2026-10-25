@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+target/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+.venv-package-*/
+venv/
+
+# PyInstaller build artifacts
+src-tauri/sidecars/build/
+src-tauri/sidecars/dist/
+src-tauri/sidecars/*.spec
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Environment
+.env
+.env.local
+
+# Tauri
+src-tauri/target/
+
+# Cache
+*.log
+
+# Test reports (测试代理生成的报告/截图)
+测试报告/
+
+# 调试/验证用临时截图
+__verify-imgs/
+
+src-tauri/sidecars/nb-trainer/weights_pack/
+
+# IDE / 编辑器个人配置
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# TypeScript 增量构建信息
+*.tsbuildinfo
+
+# Python 测试与检查缓存
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Playwright 运行产物
+test-results/
+playwright-report/
+
+# 本地压缩包/发布包
+*.zip
