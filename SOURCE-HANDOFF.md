@@ -38,7 +38,6 @@
 | `public/chart.html` | 独立曲线窗口，和 React 内嵌图不是同一实现 |
 | `docs/教学` | 快速上手、演示脚本、编号人工验收清单 |
 | `scripts/package-windows-portable.ps1` | 完整 Windows 便携应用的后续构建流程 |
-| `SOURCE-SNAPSHOT.json` | 本次收录文件的大小、SHA-256、范围与验证记录 |
 
 本次快照包含教学区、新手导航、模型库键盘操作、网络结构清单、形状合法性修复、参数量安全展示，以及 R1/R2 的“如何读图／如何比较／结果说明”。这些入口只解释或导航，不自动修改工程或替用户运行训练。
 
@@ -149,10 +148,11 @@ npm.cmd run package:windows
 
 ## 9. 文件完整性核验
 
-同目录的 `SHA256SUMS.txt` 给出 ZIP 与本说明的 SHA-256。PowerShell 可计算：
+本仓库已纳入 Git 版本控制，源码完整性由提交历史本身保证，不再依赖交付阶段生成的文件哈希清单。
 
-```powershell
-Get-FileHash -Algorithm SHA256 .\NeuroBricks-3D-0.1.0-source-20261024-104024.zip
+```bash
+git log --stat     # 查看每次提交涉及的文件
+git status         # 确认工作区与当前提交一致
 ```
 
-ZIP 内 `SOURCE-SNAPSHOT.json` 列出每个原始源码文件的相对路径、大小和 SHA-256，并单独记录交付时生成的说明与占位文件。它用于检查传输完整性，不是对模型效果的背书，也不把本机主人视为密码学对手。
+交付阶段的 `SOURCE-SNAPSHOT.json`（逐文件 SHA-256 清单）在首次提交后即已失效：它记录的是打包当时工作区的哈希，后续任何修改都会让校验必然不通过，而它内含的原工作区提交号也与本仓库无关。该文件已移除，需要查阅时可从首次提交 `afcba02` 中取回。

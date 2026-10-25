@@ -51,10 +51,14 @@ The current product promise is **small datasets, one Windows machine / one consu
 
 ### Install
 
-1. Download the latest `NeuroBricks-3D-x.x.x-windows-x64-portable-*.zip` from [Releases](https://github.com/OPjfc192/neurobricks-3d/releases)
-2. Extract the complete ZIP and run `NeuroBricks 3D.exe`
+> **Prebuilt packages are not published yet.** The [Releases](https://github.com/OPjfc192/neurobricks-3d/releases) page stays empty until the first portable build is produced. Until then, run from source as described in [Development](#development).
 
-The training engine and built-in datasets are bundled inside the installer. End users do not install Python or the CUDA toolkit. GPU training requires a compatible NVIDIA GPU driver; otherwise the same bundled runtime uses CPU.
+Once a portable build is available it will be published as `NeuroBricks-3D-x.x.x-windows-x64-portable-*.zip`:
+
+1. Download the latest ZIP from [Releases](https://github.com/OPjfc192/neurobricks-3d/releases)
+2. Extract the complete archive and run `NeuroBricks 3D.exe`
+
+The training engine and built-in datasets are bundled inside that package. End users do not install Python or the CUDA toolkit. GPU training requires a compatible NVIDIA GPU driver; otherwise the same bundled runtime uses CPU.
 
 > System requirements: Windows 10/11 (64-bit)
 
@@ -128,10 +132,14 @@ Task gamification and SSH training remain backlog ideas, not current product com
 
 ### 安装
 
-1. 从 [Releases](https://github.com/OPjfc192/neurobricks-3d/releases) 下载最新的 `NeuroBricks-3D-x.x.x-windows-x64-portable-*.zip`
-2. 完整解压 ZIP，双击 `NeuroBricks 3D.exe`
+> **目前尚未发布预编译安装包。** 首个便携构建产物产出前，[Releases](https://github.com/OPjfc192/neurobricks-3d/releases) 页面会保持为空。在此之前请按下文「开发环境」从源码运行。
 
-训练引擎与内置数据集已全部打包在安装程序内。最终用户无需安装 Python 或 CUDA 工具链；GPU 训练需要兼容的 NVIDIA 显卡驱动，没有兼容 GPU/驱动时使用同一内置运行时转为 CPU。
+便携包发布后，文件名为 `NeuroBricks-3D-x.x.x-windows-x64-portable-*.zip`：
+
+1. 从 [Releases](https://github.com/OPjfc192/neurobricks-3d/releases) 下载最新的 ZIP
+2. 完整解压，双击 `NeuroBricks 3D.exe`
+
+训练引擎与内置数据集全部打包在该包内。最终用户无需安装 Python 或 CUDA 工具链；GPU 训练需要兼容的 NVIDIA 显卡驱动，没有兼容 GPU/驱动时使用同一内置运行时转为 CPU。
 
 > 系统要求：Windows 10/11（64 位）
 
